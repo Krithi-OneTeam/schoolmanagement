@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <table align='center' border='2'>
+            <tr>
+                <th>student_id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Mark</th>
+                <th></th>
+                <th></th>
+            </tr>
+            {% for i in x %}
+            <tr>
+                <td>{{i.s_id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.age}}</td>
+                <td>{{i.address}}</td>
+                <td>{{i.mark}}</td>
+                <td><a href="{% url 'delete' pk=i.pk %}">delete</td>
+                <td><a href="{% url 'update' pk=i.id %}">update</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

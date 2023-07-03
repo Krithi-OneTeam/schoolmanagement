@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form method='POST'>
+             {% csrf_token %}
+             student_id:<input type="text" name="s1" value={{x.s_id}}>
+             Name      :<input type="text" name="n2" value={{x.name}}>
+             age       :<input type="text" name="a2" value={{x.age}}>
+             address   :<input type="text" name="ad2" value={{x.address}}>
+             mark      :<input type="text" name="m2" value={{x.mark}}>
+             <input type="submit" name="Update">
+        </form>
+    </body>
+</html>
